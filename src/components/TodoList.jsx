@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid"; // for unique IDs
+
 const TodoList = () => {
-  let index = 3;
+  
   const [tasks, setTasks] = useState([
-    { id: 0, title: "learn react" },
-    { id: 1, title: "learn express.js" },
-    { id: 2, title: "learn nextjs" },
+   "learn react" ,
+    "learn express.js" ,
+    "learn nextjs" ,
   ]);
   const [newTask, setNewTask] = useState("");
 
@@ -17,12 +17,12 @@ const TodoList = () => {
     if (!newTask.trim()) return; // Check if newTask is empty
     setTasks((previousTasks) => [
       ...previousTasks,
-      { id: uuidv4(), title: newTask },
+       newTask ,
     ]);
     setNewTask("");
   }
-  function deleteTask(i) {
-    const newTasks = tasks.filter((task) => task.id !== i);
+  function deleteTask(index) {
+    const newTasks = tasks.filter((_,i) => i !== index);
     setTasks(newTasks);
   }
   function moveTaskUp(index) {
@@ -60,18 +60,18 @@ const TodoList = () => {
         </button>
       </div>
       <ol>
-        {tasks.map((task) => (
-          <li key={task.id} className="task">
-            <span className="text">{task.title}</span>
-            <button className="btn-del" onClick={() => deleteTask(task.id)}>
+        {tasks.map((task,index) => (
+          <li key={index} className="task">
+            <span className="text">{task}</span>
+            <button className="btn-del" onClick={() => deleteTask(index)}>
               Delete
             </button>
-            <button className="move-button" onClick={() => moveTaskUp(task.id)}>
+            <button className="move-button" onClick={() => moveTaskUp(index)}>
               ☝️
             </button>
             <button
               className="move-button"
-              onClick={() => moveTaskDown(task.id)}
+              onClick={() => moveTaskDown(index)}
             >
               👇
             </button>
