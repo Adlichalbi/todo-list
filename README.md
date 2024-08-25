@@ -32,19 +32,19 @@ To run this project locally:
    git clone https://github.com/Adlichalbi/todo-list.git
    ```
 2. **Navigate to the Project Directory:**
-```bash
+   ```bash
    cd todo-list 
-```
+   ```
 3. **Install Dependencies:**
 Make sure you have Node.js installed, then run:
-```bash
+   ```bash
    npm install
  
-```
+   ```
 4. **Run the App:**
-```bash
+   ```bash
    npm run dev
-```
+   ```
 The app will open in your default web browser.
 
 ## Component Structure
@@ -93,9 +93,7 @@ function moveTaskDown(index) {
 ```
 
 ## Screenshots And Gif's
-App Screenshot
 ![app screenshot](./screenshots//image.png)
-App functionality Gif
 ![app gif](./screenshots//gif-todo.gif)
 
 
