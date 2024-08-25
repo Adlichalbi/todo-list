@@ -92,8 +92,11 @@ function moveTaskDown(index) {
 }
 ```
 
-## Screenshots (Gif)
-![app screenshot](./screenshots//gif-todo.gif)
+## Screenshots And Gif's
+App Screenshot
+![app screenshot](./screenshots//image.png)
+App functionality Gif
+![app gif](./screenshots//gif-todo.gif)
 
 
 ### License
