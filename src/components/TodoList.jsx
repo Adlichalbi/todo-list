@@ -4,9 +4,9 @@ import { useState } from "react";
 const TodoList = () => {
   
   const [tasks, setTasks] = useState([
-   "learn react" ,
-    "learn express.js" ,
-    "learn nextjs" ,
+   "Master React" ,
+    "Master Express.js" ,
+    "Master Nextjs" ,
   ]);
   const [newTask, setNewTask] = useState("");
 
